@@ -1,43 +1,52 @@
 /* eslint-disable no-useless-constructor */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import '../src/Styles/style.css';
 //import App from './App';
+
+import Title from './Components/title';
+import PhotoWall from './Components/photowall';
 import * as serviceWorker from './serviceWorker';
 
-
-
-const Title=(props)=>{
-return (<React.Fragment><h2>{props.title}</h2></React.Fragment>);
-}
-
-
-
-const List=(props)=>{
-
-  return (
-    <React.Fragment>
-  <ol>
-    {props.list.map((task,index) => (<li key={index}>{task}</li>))}
-  </ol>
-</React.Fragment>
-
-  );
-}
 
 class Main extends React.Component {
 
   
 
   render (){
+    const posts = [{
+      id: "0",
+      description: "beautiful landscape",
+      imageLink: "https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/i4eeacaa2dbf12d6d/version/1490299332/most-beautiful-landscapes-in-europe-lofoten-european-best-destinations-copyright-iakov-kalinin.jpg" +
+      "3919321_1443393332_n.jpg"
+      }, {
+      id: "1",
+      description: "Aliens???",
+      imageLink: "https://img.purch.com/rc/640x415/aHR0cDovL3d3dy5zcGFjZS5jb20vaW1hZ2VzL2kvMDAwLzA3Mi84NTEvb3JpZ2luYWwvc3BhY2V4LWlyaWRpdW00LWxhdW5jaC10YXJpcS1tYWxpay5qcGc=" +
+      "08323785_735653395_n.jpg"
+      }, {
+      id: "2",
+      description: "On a vacation!",
+      imageLink: "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/08/24/104670887-VacationExplainsTHUMBWEB.1910x1000.jpg"
+      },{
+        id: "2",
+        description: "On a vacation!",
+        imageLink: "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/08/24/104670887-VacationExplainsTHUMBWEB.1910x1000.jpg"
+        },{
+          id: "2",
+          description: "On a vacation!",
+          imageLink: "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/08/24/104670887-VacationExplainsTHUMBWEB.1910x1000.jpg"
+          },{
+            id: "2",
+            description: "On a vacation!",
+            imageLink: "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/08/24/104670887-VacationExplainsTHUMBWEB.1910x1000.jpg"
+            }]
     
-    const tasks = ["Logi to HVD", "Open IE", "Open IE", "Fill the GBS survey", "Stay online for sometime"];
-    const todos=["Read  Angular HTTP ","Prepare Lunch","Read few pages from algorithm unlocked"];
-    return <React.Fragment>
-            <Title title="GBS survey steps" />
-            <List list={tasks}/>
-            <Title title="TO Do List"/>
-              <List list ={todos}/>
+
+return <React.Fragment>
+            <Title title="Photowall" />
+            <PhotoWall posts={posts}/>
+            
     </React.Fragment>
   }
 
