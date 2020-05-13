@@ -10,5 +10,12 @@ export function removePost(index){
 
 }
 
+export function addPost(post){
+    return {
+        type :'Add_Post',
+        post
+    }
+}
+
 //Adding Post
 

@@ -18,7 +18,8 @@ constructor(props){
             imageLink: imageLink
         }
         if(description  && imageLink){
-            this.props.onAddPhoto(post);
+            this.props.addPost(post);
+            this.props.onHistory.push('/')
             
         }
     }

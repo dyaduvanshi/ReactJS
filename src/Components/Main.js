@@ -34,12 +34,11 @@ export default class Main extends React.Component {
               <PhotoWall {...this.props}/>
             </React.Fragment>)}/>
   
-            {/*<Route path="/AddPhoto" render={({history})=>(
-              <AddPhoto onAddPhoto={(addedPost)=>{
-                this.onAddPhoto(addedPost);
-                history.push('/'); 
-              }}/>
-            )} />*/}
+            <Route path="/AddPhoto" render={({history})=>(
+              <AddPhoto {...this.props}
+               onHistory={history}
+              />
+            )} />
               
               
       </React.Fragment>
