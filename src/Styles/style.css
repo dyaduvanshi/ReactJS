@@ -39,17 +39,59 @@ h1{
     width: calc(100% + 4rem);
     margin :-2rem 0rem 0rem -2rem;
 }
+.addIcon {
+    background: url("https://image.flaticon.com/icons/svg/60/60740.svg") center no-repeat;
+    background-size: contain;
+    padding: 40px;
+    display: table;
+    margin: 20px auto;
+    border: none;
+   }
 
 .button-container {
     display: flex;
     justify-content: center;
 
 }
-.remove-button {
+button {
     flex-basis:40%;
     color: red;
     font-size: 15px;
     border: 2px solid #f2f2f2;
     line-height: 2;
     padding :5px;
+}
+
+.form {
+
+    background: white;
+    max-width: 350px;
+    margin : 0 auto ;
+    padding :45px;
+}
+
+.form input {
+    font-family: sans-serif;
+    width: 100%;
+    margin : 0 0 15px;
+    padding :15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background: #f2f2f2;
+}
+
+.form button{
+    font-family: sans-serif;
+    text-transform: uppercase;
+    background: #065784;
+    width: 100%;
+    border:none;
+    padding : 15px;
+    color:white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background:#7bb857;
 }
