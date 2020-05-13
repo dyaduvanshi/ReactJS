@@ -1,8 +1,8 @@
 /* eslint-disable no-useless-constructor */
 import React from 'react';
-import Title from './title';
+//import Title from './title';
 import PhotoWall from './photowall';
-import {Route} from 'react-router-dom';
+import {Route, Link} from 'react-router-dom';
 import AddPhoto from './AddPhoto';
 
 export default class Main extends React.Component {
@@ -29,8 +29,11 @@ export default class Main extends React.Component {
       
   
   return <React.Fragment>
+            <h1>
+              <Link to ='/'>PhotoWall</Link>
+            </h1>
             <Route  exact path="/" render={()=>(<React.Fragment>
-              <Title title="Photowall" />
+              
               <PhotoWall {...this.props}/>
             </React.Fragment>)}/>
   
